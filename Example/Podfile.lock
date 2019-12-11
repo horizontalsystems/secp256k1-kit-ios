@@ -1,0 +1,16 @@
+PODS:
+  - Secp256k1Kit.swift (1.0)
+
+DEPENDENCIES:
+  - Secp256k1Kit.swift (from `../`)
+
+EXTERNAL SOURCES:
+  Secp256k1Kit.swift:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Secp256k1Kit.swift: 93b1bfbb8909c12605666cc3b1e59d1d1fde7322
+
+PODFILE CHECKSUM: 69814408346cba9adbca69134701b8d6633a2779
+
+COCOAPODS: 1.8.4

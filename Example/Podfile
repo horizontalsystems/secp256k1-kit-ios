@@ -1,6 +1,6 @@
-use_frameworks!
+platform :ios, '11'
+use_modular_headers!
+
 target 'Secp256k1Kit_Tests' do
-  pod 'Secp256k1Kit', :path => '../'
-  
-  
+  pod 'Secp256k1Kit.swift', :path => '../'
 end
