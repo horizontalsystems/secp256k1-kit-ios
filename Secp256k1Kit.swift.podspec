@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Secp256k1Kit.swift'
   s.module_name      = 'Secp256k1Kit'
-  s.version          = '1.0'
+  s.version          = '1.1'
   s.summary          = 'Crypto secp256k1 library for Swift'
 
   s.description      = <<-DESC
@@ -22,8 +22,10 @@ CryptoSecp256k1 includes crypto functions for signing transactions Swift. It sup
   s.preserve_paths = ['Secp256k1Kit/Libraries']
   s.vendored_libraries  = 'Secp256k1Kit/Libraries/lib/libsecp256k1.a'
 
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.pod_target_xcconfig = {
     'HEADER_SEARCH_PATHS' => '"${PODS_TARGET_SRCROOT}/Secp256k1Kit/Libraries/include"',
-    'LIBRARY_SEARCH_PATHS' => '"${PODS_TARGET_SRCROOT}/Secp256k1Kit/Libraries/lib"'
+    'LIBRARY_SEARCH_PATHS' => '"${PODS_TARGET_SRCROOT}/Secp256k1Kit/Libraries/lib"',
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
 end
